@@ -4,7 +4,18 @@ Create debian chroots easily.
 
 ## Getting Started
 
-I personally use it to create build machines.
+```
+create_chroot.sh -h
+usage: create_chroot.sh [options]
+options:
+        -h           : display this and exit
+        -c           : create the chroot as a tarball
+        -i           : install missing host package (binutils debootstrap)
+        -a <arch>    : set arch type (default: amd64) (amd64 arm64 armel armhf i386 mips mipsel powerpc ppc64el s390x)
+        -v <version> : set version type (default: jessie) (experimental jessie oldstable sid stable stretch testing unstable wheezy)
+        -m <mirror>  : set the mirrot (default: http://deb.debian.org/debian/)
+        -p <script>  : execute this script in the chroot (post-install)
+```
 
 ### Example
 
